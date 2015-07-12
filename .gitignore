@@ -1,0 +1,11 @@
+# Node, npm bla. bla.
+node_modules/
+
+# Database
+*.db
+
+# Nano backup
+*~
+
+# SWAP files
+*.swp

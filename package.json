@@ -1,0 +1,23 @@
+{
+  "name": "AngularTest",
+  "version": "0.0.0",
+  "description": "Testing Angular.js and Express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "keywords": [
+    "angular",
+    "express"
+  ],
+  "author": "Fredrik A. Madsen-Malmo",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.2",
+    "express": "^4.13.1"
+  }
+}
