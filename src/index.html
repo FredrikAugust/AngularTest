@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title></title>
+    <title>Testing Angular and Express</title>
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Testing Angular.js and Express.js">
+    <meta name="keywords" content="angularjs,expressjs,angular,express,js,postgres">
     <meta name='author' content="Fredrik A. Madsen-Malmo">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,8 @@
 <body>
     <div class="container">
         <h1>Aether Nodes</h1>
-        <table ng-controller='PostgresController as pgCtrl'>
+        <hr>
+        <table ng-controller='PostgresController as pgCtrl' class="table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -34,9 +35,9 @@
                     <th>Online</th>
                 </tr>
             </thead>
-            <tbody ng-repeat="(key, value) in pgCtrl.nodes">
-                <tr ng-repeat="(nodeKey, nodeValue) in value">
-                    <td>{{ nodeValue }}</td>
+            <tbody>
+                <tr ng-repeat="node in pgCtrl.nodes" ng-class="{ online:node['online'] }">
+                    <td ng-repeat="(key, value) in node">{{ value }}</td>
                 </tr>
             </tbody>
         </table>
