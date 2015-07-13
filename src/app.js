@@ -21,24 +21,23 @@ app.get('/', function (req, res) {
 
 // Trying to use postgres
 app.get('/pg', function (req, res) {
-	console.log('Mr. Wizard is now going to connect to pg.');
+	console.log('Connecting to database');
 
 	// Connect to the database, using the con string
 	pg.connect(pgCon, function (err, client, done) {
 		if (err) {
-			return console.error('Mr. Wizard failed his mission. Fleeing the crime scene.', err);
+			return console.error('Couldn\'t connect to database', err);
 		}
 
-		console.log('Mr. Wizard has established a connection with the database, \
-					he\'s now going to attempt to query it.');
+		console.log('Connection established. Performing query.');
 
 		// Exec query
 		client.query('select * from Entry', function (err, result) {
 			if (err) {
-				return console.error('Mr. Wizard failed again :(', err);
+				return console.error('Could not perform query', err);
 			};
 
-			console.log('Mr. Wizard is confirmed a magician.');
+			console.log('Query completed successfully');
 
 			// Send a response
 			res.send(result.rows);
