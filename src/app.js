@@ -48,8 +48,11 @@ app.get('/pg', function (req, res) {
 // Express middleware?
 app.use(express.static('src'));
 
-// Set up server on port 3000
-var server = app.listen(3000, function () {
+// Get the port from an evironment variable
+var port = process.env.PORT || process.argv[3];
+
+// Set up server on port os.environ.PORT
+var server = app.listen(port, function () {
     var host = server.address().address;
     var port = server.address().port;
 
