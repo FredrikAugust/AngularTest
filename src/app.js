@@ -7,7 +7,7 @@ var pg = require('pg');
 var app = express();
 
 // Postgres constring
-var pgCon = 'postgres://csfkqtpwtkcpix:Sqpc0fXEC8lBmIiLFujF7GUFXr@ec2-54-217-202-109.eu-west-1.compute.amazonaws.com:5432/d9oe5a348f8jl6';
+var pgCon = process.env.DATABASE_URL || process.argv[2];
 
 // Turn on SSL when connecting to db
 pg.defaults.ssl = true;
