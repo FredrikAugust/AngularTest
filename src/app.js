@@ -9,7 +9,7 @@ var app = express();
 // Postgres constring
 var pgCon = process.env.DATABASE_URL || process.argv[2];
 
-// Turn on SSL when connecting to db
+// SSL is needed when connecting to a heroku database
 pg.defaults.ssl = true;
 
 // Home route
