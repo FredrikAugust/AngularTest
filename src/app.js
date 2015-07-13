@@ -29,7 +29,7 @@ app.get('/pg', function (req, res) {
 			return console.error('Couldn\'t connect to database', err);
 		}
 
-		console.log('Connection established. Performing query.');
+		console.log('Connection established, performing query');
 
 		// Exec query
 		client.query('select * from Entry', function (err, result) {
