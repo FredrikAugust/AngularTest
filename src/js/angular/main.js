@@ -1,6 +1,6 @@
 // Declare a new Angular app
 var app = angular.module('testApp', []);
 
-app.controller('PostgresTesting', function () {
-
-});
+app.controller('PostgresController', ['$http', function ($http) {
+	this.nodes = [];
+}]);

@@ -23,7 +23,23 @@
 </head>
 <body>
     <div class="container">
-        <p>Something works.</p>
+        <h1>Aether Nodes</h1>
+        <table ng-controller='PostgresController as pgCtrl'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>IP</th>
+                    <th>Port</th>
+                    <th>Online</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="(key, value) in pgCtrl.nodes">
+                <tr ng-repeat="(nodeKey, nodeValue) in value">
+                    <td>{{ nodeValue }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- jQuery Google CDN -->
