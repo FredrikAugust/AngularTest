@@ -1,0 +1,3 @@
+<tr ng-repeat="node in pgCtrl.nodes | orderBy:'id'" ng-show="node['online']==true">
+    <td ng-repeat="(key, value) in node">{{ value }}</td>
+</tr>
